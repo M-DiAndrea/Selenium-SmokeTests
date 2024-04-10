@@ -1,0 +1,1020 @@
+{
+  "id": "d329322a-0aa4-424b-be81-56ebf80f6540",
+  "version": "2.0",
+  "name": "NOTE Smoke Test",
+  "url": "https://notealpha.nepacil.local",
+  "tests": [{
+    "id": "87be5ece-5afe-4554-8bb2-76c7a06182ed",
+    "name": "IL Attendant - View Payment Status",
+    "commands": [{
+      "id": "7099357d-ed36-43ef-8c94-5f2254250562",
+      "comment": "SETUP1.1 - Set Speed",
+      "command": "setSpeed",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af6af715-a6b8-4477-b88b-62d2d4077a86",
+      "comment": "SETUP1.2 - Load Page",
+      "command": "open",
+      "target": "https://notealpha.mycil.org/Account/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6c652be-b671-4f81-bde4-550e86fb7dbd",
+      "comment": "SETUP1.3 - Set Window Size",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db5df11a-01ee-4073-b931-9fffe8c5c670",
+      "comment": "LOGIN1.1 - Select Email",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=Email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06eba661-5253-46cd-8dbf-e072f5fdf7fc",
+      "comment": "LOGIN1.2 - Enter Email",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "gladys13gtz@me.com"
+    }, {
+      "id": "f1bc8d7f-1d61-4ace-a760-2128ae32a3f8",
+      "comment": "LOGIN1.3 - Select Password",
+      "command": "click",
+      "target": "id=Password",
+      "targets": [
+        ["id=Password", "id"],
+        ["name=Password", "name"],
+        ["css=#Password", "css:finder"],
+        ["xpath=//input[@id='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7df6a89e-db2e-4912-9d23-5631f0cac1df",
+      "comment": "LOGIN1.4 - Enter Password",
+      "command": "type",
+      "target": "id=Password",
+      "targets": [],
+      "value": "lip-donation1-rebuff"
+    }, {
+      "id": "76a913ae-bdfa-4cbe-a710-323e3ee59e2d",
+      "comment": "LOGIN1.5 - Select Login",
+      "command": "click",
+      "target": "xpath=//button[@name='submitButton']",
+      "targets": [
+        ["name=submitButton", "name"],
+        ["css=.btn-login", "css:finder"],
+        ["xpath=//button[@name='submitButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f02c235-24fc-4fad-8436-5e6eeb2326cb",
+      "comment": "WAIT1.1 - Wait for Element (Dashboard) Visible",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(.,'Payment Status')]",
+      "targets": [
+        ["css=.\\|\\|:nth-child(6) .nav-label", "css:finder"],
+        ["xpath=//ul[@id='side-menu']/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//li[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Payment Status')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "cdd59b6e-ddc2-4c05-9aff-698a65e6ca7d",
+      "comment": "TSST1.1 - Confirm Unlock on Dashboard",
+      "command": "click",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//div[@id='TransientOrganizationId_chosen']/a/div/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd0ac275-c666-46bf-9aa1-ee7bc19bc1df",
+      "comment": "TSST2.1 - Select Organization - IL",
+      "command": "click",
+      "target": "xpath=//div/div/ul/li",
+      "targets": [
+        ["css=.result-selected", "css:finder"],
+        ["xpath=//div[@id='TransientOrganizationId_chosen']/div/ul/li", "xpath:idRelative"],
+        ["xpath=//div/div/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "937e8622-cecc-41e6-a4ef-cb91fceb5992",
+      "comment": "TSST3.1 - Select Payment Status",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Payment Status')]",
+      "targets": [
+        ["css=.active .nav-label", "css:finder"],
+        ["xpath=//ul[@id='side-menu']/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//li[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Payment Status')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3b147e8-dc60-4bb3-b2f2-9fe93dd2473d",
+      "comment": "TSST3.2 - Select View All Payment Statuses",
+      "command": "click",
+      "target": "linkText=View All Payment Statuses",
+      "targets": [
+        ["linkText=View All Payment Statuses", "linkText"],
+        ["css=.in a", "css:finder"],
+        ["xpath=//a[contains(text(),'View All Payment Statuses')]", "xpath:link"],
+        ["xpath=(//a[@onclick='showLoading();'])[5]", "xpath:attributes"],
+        ["xpath=//ul[@id='side-menu']/li[6]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Timesheets/Search?filterHistory=1')]", "xpath:href"],
+        ["xpath=//li[6]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View All Payment Statuses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29dd4555-289f-4402-a344-5fb52817508f",
+      "comment": "TSST4.1 - Select View Timesheet",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'View')]",
+      "targets": [
+        ["id=OKbpEYFZlpSn2kBT8qR593WAhbQHkz64RYRND9+JNZE=", "id"],
+        ["css=#OKbpEYFZlpSn2kBT8qR593WAhbQHkz64RYRND9\\+JNZE\\=", "css:finder"],
+        ["xpath=//button[@id='OKbpEYFZlpSn2kBT8qR593WAhbQHkz64RYRND9+JNZE=']", "xpath:attributes"],
+        ["xpath=//table[@id='tblTimesheets']/tbody/tr/td/button", "xpath:idRelative"],
+        ["xpath=//td/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b18b6a09-8de3-4a15-a53c-f0adfe944fe6",
+      "comment": "TSST4.2 - Wait for Element (Processed Timesheet) Present",
+      "command": "waitForElementPresent",
+      "target": "xpath=//form[@id='DetailsForm']/div/div[5]/div",
+      "targets": [
+        ["css=.row:nth-child(12) > .col-sm-12", "css:finder"],
+        ["xpath=//form[@id='DetailsForm']/div/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div/div[5]/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "791dbfec-a474-48ea-b10e-89d807fb26d4",
+      "comment": "TSST3.3 - Verify for Element (Processed Timesheet) Present",
+      "command": "verifyElementPresent",
+      "target": "xpath=//form[@id='DetailsForm']/div/div[5]/div",
+      "targets": [
+        ["css=.row:nth-child(12) > .col-sm-12", "css:finder"],
+        ["xpath=//form[@id='DetailsForm']/div/div[5]/div", "xpath:idRelative"],
+        ["xpath=//div/div[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc0713d4-6e63-467c-89c0-64edc9b53565",
+      "comment": "CHECKOUT1.1 - Select Log Out",
+      "command": "click",
+      "target": "linkText=Log out",
+      "targets": [
+        ["linkText=Log out", "linkText"],
+        ["css=.navbar-top-links > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Log out')]", "xpath:link"],
+        ["xpath=//div[@id='page-wrapper']/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Account/Logout')]", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3b71607d-8681-403a-b756-c8c2f823d8af",
+    "name": "PASL Attendant - Save and Submit Timesheet",
+    "commands": [{
+      "id": "2eace341-735a-40ae-b77f-8545945a9250",
+      "comment": "SETUP1.1 - Set Speed",
+      "command": "setSpeed",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5081182f-b665-4e4d-8e5b-c8b88b9b1d2f",
+      "comment": "SETUP1.2 - Load Page",
+      "command": "open",
+      "target": "https://notealpha.mycil.org/Account/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b93675b-460f-4b66-aed3-d37f5f1e7e2f",
+      "comment": "SETUP1.3 - Set Window Size",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7504f28c-1c41-44ee-884a-0b437e6ea10d",
+      "comment": "LOGIN1.1 - Select Email",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=Email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad0ee069-10c5-44e2-b90b-d2a8102cb179",
+      "comment": "LOGIN1.2 - Enter Email",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "messypro@icloud.com"
+    }, {
+      "id": "3e7ff2a0-5aa7-47af-beb1-b056a6acaeb2",
+      "comment": "LOGIN1.3 - Select Password",
+      "command": "click",
+      "target": "id=Password",
+      "targets": [
+        ["id=Password", "id"],
+        ["name=Password", "name"],
+        ["css=#Password", "css:finder"],
+        ["xpath=//input[@id='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6572e20e-7087-49da-8e5b-7dbda107c996",
+      "comment": "LOGIN1.4 - Enter Password",
+      "command": "type",
+      "target": "id=Password",
+      "targets": [],
+      "value": "lip-donation1-rebuff"
+    }, {
+      "id": "fcdb8c28-10fd-49a1-8454-26000e7e62d4",
+      "comment": "LOGIN1.5 - Select Login",
+      "command": "click",
+      "target": "xpath=//button[@name='submitButton']",
+      "targets": [
+        ["name=submitButton", "name"],
+        ["css=.btn-login", "css:finder"],
+        ["xpath=//button[@name='submitButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9614917e-cdec-4f45-af7c-b3a7c1a85393",
+      "comment": "SSTS1.1 - Wait for Element (Timesheet Menu) Visible",
+      "command": "waitForElementVisible",
+      "target": "linkText=Timesheets",
+      "targets": [
+        ["linkText=Timesheets", "linkText"],
+        ["css=.\\|\\| > a", "css:finder"],
+        ["xpath=//ul[@id='side-menu']/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Timesheets/Search')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Timesheets')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "c502130e-7b77-4481-a930-7029f43d2356",
+      "comment": "SSTS2.1 - Select Timesheets",
+      "command": "click",
+      "target": "linkText=Timesheets",
+      "targets": [
+        ["linkText=Timesheets", "linkText"],
+        ["css=.\\|\\|:nth-child(7) > a", "css:finder"],
+        ["xpath=//ul[@id='side-menu']/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Timesheets/Search')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Timesheets')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "326890f5-24a5-44fe-89ee-9c3971691bf2",
+      "comment": "SSTS2.2 - Select Create New Timesheet",
+      "command": "click",
+      "target": "linkText=Create New Timesheet",
+      "targets": [
+        ["linkText=Create New Timesheet", "linkText"],
+        ["css=.nav > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Create New Timesheet')]", "xpath:link"],
+        ["xpath=(//a[@onclick='showLoading();'])[5]", "xpath:attributes"],
+        ["xpath=//ul[@id='side-menu']/li[6]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Timesheets/Create')]", "xpath:href"],
+        ["xpath=//li[6]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create New Timesheet')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "096ddac2-b09e-478a-b9da-86238757ec24",
+      "comment": "SSTS2.3 - Wait for Element (Create New Timesheet) Visible",
+      "command": "waitForElementVisible",
+      "target": "css=.row:nth-child(11) > .col-sm-12",
+      "targets": [
+        ["css=.row:nth-child(11) > .col-sm-12", "css:finder"],
+        ["xpath=//form[@id='DetailsForm']/div/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div/div[4]/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "decc3e57-a01b-4e69-b953-cfdd629d18e3",
+      "comment": "SSTS2.4 - Select Punch In Time (12:00 AM)",
+      "command": "select",
+      "target": "id=PunchIn1_0",
+      "targets": [],
+      "value": "label=12:00 AM"
+    }, {
+      "id": "2f2fbb4a-ae2d-4571-a40d-5a702b8ea089",
+      "comment": "SSTS2.5 - Select Punch Out",
+      "command": "click",
+      "target": "id=PunchOut1_0",
+      "targets": [
+        ["id=PunchOut1_0", "id"],
+        ["name=PunchTimesheetView.Details[0].PunchOut1", "name"],
+        ["css=#PunchOut1_0", "css:finder"],
+        ["xpath=//select[@id='PunchOut1_0']", "xpath:attributes"],
+        ["xpath=//tr[@id='row0']/td[3]/select", "xpath:idRelative"],
+        ["xpath=//td[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0ad1963-6e88-4b2d-9c65-d7a32b84795b",
+      "comment": "SSTS2.6 - Select Punch Out Time (2:00 AM)",
+      "command": "select",
+      "target": "id=PunchOut1_0",
+      "targets": [],
+      "value": "label=2:00 AM"
+    }, {
+      "id": "945cd9db-01c6-4d06-be93-da87c5eab6bf",
+      "comment": "SSTS3.1 - Select Tasks Button",
+      "command": "click",
+      "target": "id=TaskBtn_0",
+      "targets": [
+        ["id=TaskBtn_0", "id"],
+        ["css=#TaskBtn_0", "css:finder"],
+        ["xpath=//button[@id='TaskBtn_0']", "xpath:attributes"],
+        ["xpath=//tr[@id='row0']/td[11]/button", "xpath:idRelative"],
+        ["xpath=//td[11]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Services')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3959daf8-91ae-40a2-8166-9aee412d9f78",
+      "comment": "SSTS3.2 - Wait for Element (Task Modal) Visible",
+      "command": "waitForElementVisible",
+      "target": "css=#ChooseTask_0 .modal-content",
+      "targets": [
+        ["css=#ChooseTask_0 .modal-content", "css:finder"],
+        ["xpath=//div[@id='ChooseTask_0']/div/div", "xpath:idRelative"],
+        ["xpath=//td[11]/div/div/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "03e9e1fc-6124-4f51-a45a-0bc9a1c1aabf",
+      "comment": "SSTS3.3 - Select Services (Tasks)",
+      "command": "click",
+      "target": "id=cbxTaskCode_0_0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac4cf007-889f-409c-bcfc-3dd66d5ffb11",
+      "comment": "SSTS3.4 - Click Task Modal",
+      "command": "click",
+      "target": "css=#ChooseTask_0 .modal-footer",
+      "targets": [
+        ["css=#ChooseTask_0 .modal-footer", "css:finder"],
+        ["xpath=//div[@id='ChooseTask_0']/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//td[11]/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4780499a-e03a-4103-9c4a-e3adcf512376",
+      "comment": "SSTS3.5 - Choose Task",
+      "command": "click",
+      "target": "xpath=//button[@id='SaveTasks_0 ']",
+      "targets": [
+        ["id=SaveTasks_0 ", "id"],
+        ["xpath=//button[@id='SaveTasks_0 ']", "xpath:attributes"],
+        ["xpath=//div[@id='ChooseTask_0']/div/div/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Save')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ee2ac45-3104-4532-bf25-524ead020a42",
+      "comment": "SSTS4.1 - Wait for Element (Timesheet) Visible",
+      "command": "waitForElementVisible",
+      "target": "css=.row:nth-child(5)",
+      "targets": [
+        ["css=.row:nth-child(5)", "css:finder"],
+        ["xpath=//form[@id='DetailsForm']/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div[2]", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "cc806e7a-6dd2-4fe5-8654-1fbb88264190",
+      "comment": "SSTS4.2 - Save Timesheet",
+      "command": "click",
+      "target": "id=btnSaveTimesheet",
+      "targets": [
+        ["id=btnSaveTimesheet", "id"],
+        ["name=SaveTimesheet", "name"],
+        ["css=#btnSaveTimesheet", "css:finder"],
+        ["xpath=//button[@id='btnSaveTimesheet']", "xpath:attributes"],
+        ["xpath=//form[@id='DetailsForm']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "686a08ce-dacb-4232-aa0c-f4caff071571",
+      "comment": "SSTS4.3 -Select Confirm",
+      "command": "click",
+      "target": "css=.confirm",
+      "targets": [
+        ["css=.confirm", "css:finder"],
+        ["xpath=//div[7]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Ok')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f89c2174-0c08-4b19-ad37-554875442257",
+      "comment": "SSTS5.1 - Select View Processed Timesheets",
+      "command": "click",
+      "target": "css=.nav-second-level > li:nth-child(4) span:nth-child(2)",
+      "targets": [
+        ["css=.nav-second-level > li:nth-child(4) span:nth-child(2)", "css:finder"],
+        ["xpath=//ul[@id='side-menu']/li[6]/ul/li[4]/a/span[2]", "xpath:idRelative"],
+        ["xpath=//li[6]/ul/li[4]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Saved Timesheets')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd61c12f-45d5-4f56-811b-c0849f8f3243",
+      "comment": "SSTS5.2 - Select View",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'View')]",
+      "targets": [
+        ["id=ApjKuNZSBScEguSdLF8dbeQJmDkUvxFKFuAWCgkZs90=", "id"],
+        ["css=#ApjKuNZSBScEguSdLF8dbeQJmDkUvxFKFuAWCgkZs90\\=", "css:finder"],
+        ["xpath=//button[@id='ApjKuNZSBScEguSdLF8dbeQJmDkUvxFKFuAWCgkZs90=']", "xpath:attributes"],
+        ["xpath=//table[@id='tblTimesheets']/tbody/tr/td/button", "xpath:idRelative"],
+        ["xpath=//td/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b052b6f6-d7e3-4d00-89d3-c15b4ea0293c",
+      "comment": "SSTS5.3 - Wait for Element (Timesheet) Visible",
+      "command": "waitForElementVisible",
+      "target": "css=.row:nth-child(11) > .col-sm-12",
+      "targets": [
+        ["css=.row:nth-child(11) > .col-sm-12", "css:finder"],
+        ["xpath=//form[@id='DetailsForm']/div/div[4]/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[4]/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "7b58964e-d51f-4c7f-87e1-ccaccde33de5",
+      "comment": "SSTS5.4 - Check Attestation of Truth",
+      "command": "click",
+      "target": "id=chkConfOfTruth",
+      "targets": [
+        ["id=chkConfOfTruth", "id"],
+        ["name=chkConfOfTruth", "name"],
+        ["css=#chkConfOfTruth", "css:finder"],
+        ["xpath=//input[@id='chkConfOfTruth']", "xpath:attributes"],
+        ["xpath=//form[@id='DetailsForm']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e272877c-2850-4210-b323-08a496d75658",
+      "comment": "SSTS5.5 - Submit Timesheet",
+      "command": "click",
+      "target": "id=btnSubmitTimesheet",
+      "targets": [
+        ["id=btnSubmitTimesheet", "id"],
+        ["name=SubmitTimesheet", "name"],
+        ["css=#btnSubmitTimesheet", "css:finder"],
+        ["xpath=//button[@id='btnSubmitTimesheet']", "xpath:attributes"],
+        ["xpath=//form[@id='DetailsForm']/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d54fcf09-0210-4ebf-beae-77a4f2095944",
+      "comment": "SSTS5.6 - Select Confirm",
+      "command": "click",
+      "target": "css=.confirm",
+      "targets": [
+        ["css=.confirm", "css:finder"],
+        ["xpath=//div[7]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit Timesheet.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd91ad81-38f4-4024-81e5-036115bff74b",
+      "comment": "SSTS5.7 - Wait for Element (Success) Visible",
+      "command": "waitForElementPresent",
+      "target": "css=.sweet-alert",
+      "targets": [
+        ["css=.sweet-alert", "css:finder"],
+        ["xpath=//div[18]", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "f878b858-562c-4e5e-9786-0f3882dc1287",
+      "comment": "SSTS5.8 - Select Confirm",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Ok')]",
+      "targets": [
+        ["css=.confirm", "css:finder"],
+        ["xpath=//div[19]/div[7]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Ok')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3147d2a2-3410-4841-8143-af62aba68959",
+      "comment": "CHECKOUT1.1 - Select Log Out",
+      "command": "click",
+      "target": "linkText=Log out",
+      "targets": [
+        ["linkText=Log out", "linkText"],
+        ["css=.navbar-top-links > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Log out')]", "xpath:link"],
+        ["xpath=//div[@id='page-wrapper']/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Account/Logout')]", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "794e2281-628b-4cac-b965-d6d41655469c",
+    "name": "VA Attendant - Submit EVV",
+    "commands": [{
+      "id": "f6346971-87ad-4699-be11-e47776b6db9c",
+      "comment": "SETUP1.1 - Set Speed",
+      "command": "setSpeed",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a996567d-f2a4-4c63-9c0b-3d3260b4e687",
+      "comment": "SETUP1.2 - Load Page",
+      "command": "open",
+      "target": "https://notealpha.mycil.org/Account/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12e46cdc-648b-454c-95a5-9241c59d82c4",
+      "comment": "SETUP1.3 - Set Window Size",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f03f2689-d000-421d-9383-4bd2baf722c0",
+      "comment": "LOGIN1.1 - Select Email",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=Email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f46baf0-cc8d-4c40-a917-b921cee225f3",
+      "comment": "LOGIN1.2 - Enter Email",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "shay_433@hotmail.com"
+    }, {
+      "id": "a6e2260a-ded5-4bf9-b185-10252677484b",
+      "comment": "LOGIN1.3 - Select Password",
+      "command": "click",
+      "target": "id=Password",
+      "targets": [
+        ["id=Password", "id"],
+        ["name=Password", "name"],
+        ["css=#Password", "css:finder"],
+        ["xpath=//input[@id='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "197fe2d8-e7ee-4c2b-992a-50b64ade5aea",
+      "comment": "LOGIN1.4 - Enter Password",
+      "command": "type",
+      "target": "id=Password",
+      "targets": [],
+      "value": "lip-donation1-rebuff"
+    }, {
+      "id": "9c96a86c-ff09-4190-93c3-5d7153a17a81",
+      "comment": "LOGIN1.5 - Select Login",
+      "command": "click",
+      "target": "xpath=//button[@name='submitButton']",
+      "targets": [
+        ["name=submitButton", "name"],
+        ["css=.btn-login", "css:finder"],
+        ["xpath=//button[@name='submitButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52890021-05c2-49f1-9b9c-c670fab0a6aa",
+      "comment": "VAEVV1.1 - Select Electronic Visits",
+      "command": "click",
+      "target": "linkText=Electronic Visits",
+      "targets": [
+        ["linkText=Electronic Visits", "linkText"],
+        ["css=.\\|\\|:nth-child(7) > a", "css:finder"],
+        ["xpath=//ul[@id='side-menu']/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ElectronicVisit/Search')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Electronic Visits')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69625249-b854-41f2-9f0f-8ce619831474",
+      "comment": "VAEVV1.2 - Select Edit Electronic Visits",
+      "command": "click",
+      "target": "linkText=Edit EVV Visits",
+      "targets": [
+        ["linkText=Edit EVV Visits", "linkText"],
+        ["css=.in > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit EVV Visits')]", "xpath:link"],
+        ["xpath=(//a[@onclick='showLoading();'])[10]", "xpath:attributes"],
+        ["xpath=//ul[@id='side-menu']/li[7]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ElectronicVisit/Search?navItem=Edit')]", "xpath:href"],
+        ["xpath=//li[7]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit EVV Visits')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa651fa9-3340-447e-b565-9087aa3dfddd",
+      "comment": "VAEVV1.3 - Select Member Drop-down",
+      "command": "click",
+      "target": "linkText=Please select a Member",
+      "targets": [
+        ["linkText=Please select a Member", "linkText"],
+        ["css=.chosen-single", "css:finder"],
+        ["xpath=//div[@id='SelectedClient_chosen']/a", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Please select a Member')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "99a2e886-d544-4d7a-9675-7fb66bb97ecb",
+      "comment": "VAEVV1.4 - Select Member",
+      "command": "click",
+      "target": "css=.active-result:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c1f103e-e811-4156-a57d-21a01c7d055f",
+      "comment": "VAEVV1.5 - Select Year Drop-down",
+      "command": "click",
+      "target": "id=SelectedVisitYear",
+      "targets": [
+        ["id=SelectedVisitYear", "id"],
+        ["name=SelectedVisitYear", "name"],
+        ["css=#SelectedVisitYear", "css:finder"],
+        ["xpath=//select[@id='SelectedVisitYear']", "xpath:attributes"],
+        ["xpath=//form[@id='SearchForm']/div/div/div/div[3]/div/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f813297e-2e07-4327-b4ea-1531eac7486d",
+      "comment": "VAEVV1.6 - Select Year",
+      "command": "select",
+      "target": "id=SelectedVisitYear",
+      "targets": [],
+      "value": "label=2023"
+    }, {
+      "id": "8c37af95-9f66-4b27-8658-9febed2b7f1f",
+      "comment": "VAEVV1.7 - Wait for Element (Pay Period) Present",
+      "command": "waitForElementPresent",
+      "target": "id=SelectedVisitPayPeriod",
+      "targets": [
+        ["id=SelectedVisitPayPeriod", "id"],
+        ["name=SelectedVisitPayPeriod", "name"],
+        ["css=#SelectedVisitPayPeriod", "css:finder"],
+        ["xpath=//select[@id='SelectedVisitPayPeriod']", "xpath:attributes"],
+        ["xpath=//form[@id='SearchForm']/div/div/div/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div[4]/div/select", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "2b4293c8-9d69-4761-93ad-e921549fc59d",
+      "comment": "VAEVV1.8 - Select Pay Period Drop-down",
+      "command": "click",
+      "target": "id=SelectedVisitPayPeriod",
+      "targets": [
+        ["id=SelectedVisitPayPeriod", "id"],
+        ["name=SelectedVisitPayPeriod", "name"],
+        ["css=#SelectedVisitPayPeriod", "css:finder"],
+        ["xpath=//select[@id='SelectedVisitPayPeriod']", "xpath:attributes"],
+        ["xpath=//form[@id='SearchForm']/div/div/div/div[4]/div/select", "xpath:idRelative"],
+        ["xpath=//div[4]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efde2435-9d9c-423f-a309-cb9488c889f3",
+      "comment": "VAEVV1.9 - Select Pay Period",
+      "command": "select",
+      "target": "id=SelectedVisitPayPeriod",
+      "targets": [],
+      "value": "label=5/18/2023 - 5/31/2023"
+    }, {
+      "id": "e69021b7-9d6d-4df7-b35e-acec14b3568b",
+      "comment": "VAEVV1.10 - Select Search",
+      "command": "click",
+      "target": "id=btnSearch",
+      "targets": [
+        ["id=btnSearch", "id"],
+        ["css=#btnSearch", "css:finder"],
+        ["xpath=//button[@id='btnSearch']", "xpath:attributes"],
+        ["xpath=//form[@id='SearchForm']/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b242f57e-5835-47f5-87bd-e417fa67576d",
+      "comment": "VAEVV2.1 - Select Create '+' EVV",
+      "command": "click",
+      "target": "id=CreateEvv_button",
+      "targets": [
+        ["id=CreateEvv_button", "id"],
+        ["css=#CreateEvv_button", "css:finder"],
+        ["xpath=//button[@id='CreateEvv_button']", "xpath:attributes"],
+        ["xpath=//div[@id='ElectronicVisitsViewComponent']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "35d97fad-b7c8-484b-92d6-127bf9a1254a",
+      "comment": "VAEVV2.1 - Click Punch In Date",
+      "command": "click",
+      "target": "id=PunchInDate_New",
+      "targets": [
+        ["id=PunchInDate_New", "id"],
+        ["css=#PunchInDate_New", "css:finder"],
+        ["xpath=//input[@id='PunchInDate_New']", "xpath:attributes"],
+        ["xpath=//tr[@id='CreateEvv_Tr']/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25571d97-a4f4-4ecf-9751-d9d40bad5ef1",
+      "comment": "VAEVV2.2 - Enter Punch In Date",
+      "command": "type",
+      "target": "id=PunchInDate_New",
+      "targets": [
+        ["id=PunchInDate_New", "id"],
+        ["css=#PunchInDate_New", "css:finder"],
+        ["xpath=//input[@id='PunchInDate_New']", "xpath:attributes"],
+        ["xpath=//tr[@id='CreateEvv_Tr']/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "2023-05-18"
+    }, {
+      "id": "f9e6c33d-5c37-401b-89b1-4b0a044d647b",
+      "comment": "VAEVV2.3 - Click Punch In Time",
+      "command": "click",
+      "target": "id=PunchInTime_New",
+      "targets": [
+        ["id=PunchInTime_New", "id"],
+        ["css=#PunchInTime_New", "css:finder"],
+        ["xpath=//input[@id='PunchInTime_New']", "xpath:attributes"],
+        ["xpath=//tr[@id='CreateEvv_Tr']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48a9c637-05b8-47e3-add2-967a3f4f3d60",
+      "comment": "VAEVV2.4 - Enter Punch In Time",
+      "command": "type",
+      "target": "id=PunchInTime_New",
+      "targets": [
+        ["id=PunchInTime_New", "id"],
+        ["css=#PunchInTime_New", "css:finder"],
+        ["xpath=//input[@id='PunchInTime_New']", "xpath:attributes"],
+        ["xpath=//tr[@id='CreateEvv_Tr']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "09:00"
+    }, {
+      "id": "ba2d0464-849f-4b2f-8a86-16ce3ceca650",
+      "comment": "VAEVV2.5 - Complete Punch In Time",
+      "command": "sendKeys",
+      "target": "id=PunchInTime_New",
+      "targets": [
+        ["id=PunchInTime_New", "id"],
+        ["css=#PunchInTime_New", "css:finder"],
+        ["xpath=//input[@id='PunchInTime_New']", "xpath:attributes"],
+        ["xpath=//tr[@id='CreateEvv_Tr']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "e52db32b-48ce-49cf-aa06-c1424793fe77",
+      "comment": "VAEVV2.6 - Click Punch Out Date",
+      "command": "click",
+      "target": "id=PunchOutDate_New",
+      "targets": [
+        ["id=PunchOutDate_New", "id"],
+        ["css=#PunchOutDate_New", "css:finder"],
+        ["xpath=//input[@id='PunchOutDate_New']", "xpath:attributes"],
+        ["xpath=//tr[@id='CreateEvv_Tr']/td[4]/input", "xpath:idRelative"],
+        ["xpath=//td[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "814343dc-ef6f-4b88-9b22-9c098a41dda3",
+      "comment": "VAEVV2.7 - Enter Punch Out Date",
+      "command": "type",
+      "target": "id=PunchOutDate_New",
+      "targets": [],
+      "value": "2023-05-18"
+    }, {
+      "id": "f358e70c-8338-4079-9499-1697b44f9ddf",
+      "comment": "VAEVV2.8 - Click Punch Out Time",
+      "command": "click",
+      "target": "id=PunchOutTime_New",
+      "targets": [
+        ["id=PunchOutTime_New", "id"],
+        ["css=#PunchOutTime_New", "css:finder"],
+        ["xpath=//input[@id='PunchOutTime_New']", "xpath:attributes"],
+        ["xpath=//tr[@id='CreateEvv_Tr']/td[5]/input", "xpath:idRelative"],
+        ["xpath=//td[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fad197c7-df2b-449d-8077-07b3dfa75422",
+      "comment": "VAEVV2.9 - Enter Punch Out Time",
+      "command": "type",
+      "target": "id=PunchOutTime_New",
+      "targets": [],
+      "value": "11:00"
+    }, {
+      "id": "9f0a66f5-736b-49ed-8e13-c2fb6809209a",
+      "comment": "VAEVV2.10 - Complete Punch Out Time",
+      "command": "sendKeys",
+      "target": "id=PunchOutTime_New",
+      "targets": [
+        ["id=PunchInTime_New", "id"],
+        ["css=#PunchInTime_New", "css:finder"],
+        ["xpath=//input[@id='PunchInTime_New']", "xpath:attributes"],
+        ["xpath=//tr[@id='CreateEvv_Tr']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "5c75fcf4-b032-411e-95d1-26cbf783b41b",
+      "comment": "VAEVV2.11 - Select Adjustment Reason Drop-down",
+      "command": "click",
+      "target": "id=ReasonTypeId_New",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a82fcea9-9be8-4c4e-b670-1f1b643592d3",
+      "comment": "VAEVV2.12 - Choose Adjustment Reason",
+      "command": "select",
+      "target": "id=ReasonTypeId_New",
+      "targets": [],
+      "value": "label=The app was not working"
+    }, {
+      "id": "1d7ade5c-9e07-49c0-a43d-283927026f19",
+      "comment": "VAEVV2.13 - Save EVV",
+      "command": "click",
+      "target": "id=SaveNew_button",
+      "targets": [
+        ["id=SaveNew_button", "id"],
+        ["css=#SaveNew_button", "css:finder"],
+        ["xpath=//button[@id='SaveNew_button']", "xpath:attributes"],
+        ["xpath=//tr[@id='CreateEvv_Tr']/td[10]/button", "xpath:idRelative"],
+        ["xpath=//td[10]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1181fadf-036f-4bad-bd41-19b739edff3d",
+      "comment": "VAEVV2.14 - Select Attestation",
+      "command": "click",
+      "target": "id=EvvAttestation",
+      "targets": [
+        ["id=EvvAttestation", "id"],
+        ["name=EvvAttestation", "name"],
+        ["css=#EvvAttestation", "css:finder"],
+        ["xpath=//input[@id='EvvAttestation']", "xpath:attributes"],
+        ["xpath=//div[@id='ElectronicVisitsViewComponent']/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ad18415-35fc-47af-bc71-0d0d443f37bb",
+      "comment": "VAEVV2.15 - Select Submit",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Submit')]",
+      "targets": [
+        ["id=Submit_2241784", "id"],
+        ["css=#Submit_2241784", "css:finder"],
+        ["xpath=//button[@id='Submit_2241784']", "xpath:attributes"],
+        ["xpath=//table[@id='tblVisits']/tbody/tr/td[11]/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51ce0466-f2a3-457a-b31f-8e609e425d6a",
+      "comment": "VAEVV2.16 - Confirm EVV",
+      "command": "click",
+      "target": "css=.confirm",
+      "targets": [
+        ["css=.confirm", "css:finder"],
+        ["xpath=//div[@id='alert-container']/div/div[7]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[7]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe345b2f-721f-4e10-98cf-09d035b47899",
+      "comment": "VAEVV2.17 - Wait for Element (EVV) Present",
+      "command": "verifyElementPresent",
+      "target": "id=iboxVisitsContent",
+      "targets": [
+        ["id=iboxVisitsContent", "id"],
+        ["css=#iboxVisitsContent", "css:finder"],
+        ["xpath=//div[@id='iboxVisitsContent']", "xpath:attributes"],
+        ["xpath=//div[@id='iboxVisits']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a2971b5-412a-4926-82d1-a2273e5f9d5c",
+      "comment": "CHECKOUT1.1 - Select Log Out",
+      "command": "click",
+      "target": "linkText=Log out",
+      "targets": [
+        ["linkText=Log out", "linkText"],
+        ["css=.navbar-top-links > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Log out')]", "xpath:link"],
+        ["xpath=//div[@id='page-wrapper']/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Account/Logout')]", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0b06ead3-0d59-4ecc-8d6f-e00093aab807",
+    "name": "NOTE Smoke Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["87be5ece-5afe-4554-8bb2-76c7a06182ed", "3b71607d-8681-403a-b756-c8c2f823d8af", "794e2281-628b-4cac-b965-d6d41655469c"]
+  }],
+  "urls": ["https://paidalpha.nepacil.local/", "https://notefoxtrotalpha.nepacil.local/", "https://notefoxtrot.nepacil.local/", "https://notealpha.nepacil.local/"],
+  "plugins": []
+}

@@ -1,0 +1,904 @@
+{
+  "id": "d329322a-0aa4-424b-be81-56ebf80f6540",
+  "version": "2.0",
+  "name": "PAID Automated Tests",
+  "url": "https://paidalpha.nepacil.local/",
+  "tests": [{
+    "id": "3b9e94c4-48bf-46fc-9c66-88bc5f91df42",
+    "name": "Consumer Demographics - Update Name",
+    "commands": [{
+      "id": "7b7eb5b8-fc89-4c01-879f-9c47e7cc1f54",
+      "comment": "SETUP1.1 - Set Speed",
+      "command": "setSpeed",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3213ca29-99c3-45ba-a6fe-8a6685913476",
+      "comment": "SETUP1.2 - Load Page",
+      "command": "open",
+      "target": "/Account/Authenticate?ReturnUrl=%2f",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab0c551c-9189-40fc-8090-323c861af457",
+      "comment": "SETUP1.3 - Set Window Size",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37d3abc4-7e14-46e2-963f-72bd8080e60c",
+      "comment": "LOGIN1.1 - Select Username",
+      "command": "click",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "084f3071-5a7e-4820-a38b-608160c169f5",
+      "comment": "LOGIN1.2 - Enter Username",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "automatedtests"
+    }, {
+      "id": "7426286e-8b96-47a1-bd34-9cc57b6b2453",
+      "comment": "LOGIN1.3 - Select Password",
+      "command": "click",
+      "target": "id=pass",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7a567d4-5a8d-4887-8283-4f860e07a7ec",
+      "comment": "LOGIN1.4 - Enter Password",
+      "command": "type",
+      "target": "id=pass",
+      "targets": [],
+      "value": "bjlnvrzVepoCE4q6GK2h"
+    }, {
+      "id": "355fa52b-dc20-48c8-ab2a-c5cfd031d16d",
+      "comment": "LOGIN1.5 - Select Login",
+      "command": "click",
+      "target": "css=input:nth-child(8)",
+      "targets": [
+        ["css=input:nth-child(8)", "css:finder"],
+        ["xpath=//input[@value='Login']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94270165-7ae5-4236-8609-8e7ef2605533",
+      "comment": "CDST1.1 - Select Organization - IL",
+      "command": "click",
+      "target": "name=StateId",
+      "targets": [
+        ["name=StateId", "name"],
+        ["css=.ui-widget", "css:finder"],
+        ["xpath=//select[@name='StateId']", "xpath:attributes"],
+        ["xpath=//form[@id='SelectStateForm']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "Illinois"
+    }, {
+      "id": "21ae4ed2-57db-4db1-a731-ea806f5ce001",
+      "comment": "CDST2.1 - Select Consumers",
+      "command": "click",
+      "target": "linkText=Consumers",
+      "targets": [
+        ["linkText=Consumers", "linkText"],
+        ["css=#navitem_client_section > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Consumers')]", "xpath:link"],
+        ["xpath=//li[@id='navitem_client_section']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Clients/Index')]", "xpath:href"],
+        ["xpath=//body/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Consumers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6796286f-ac75-4245-9328-84113061b998",
+      "comment": "CDST2.2 - Select Active Consumers",
+      "command": "click",
+      "target": "linkText=Active Consumers",
+      "targets": [
+        ["linkText=Active Consumers", "linkText"],
+        ["css=ul:nth-child(2) > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Active Consumers')]", "xpath:link"],
+        ["xpath=//div[@id='content']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Clients/Active')]", "xpath:href"],
+        ["xpath=//div[3]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Active Consumers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19ff4542-3070-4862-8251-fed8596ae0b2",
+      "comment": "CDST2.3 - Select Search",
+      "command": "click",
+      "target": "id=ClientName",
+      "targets": [
+        ["id=ClientName", "id"],
+        ["name=ClientName", "name"],
+        ["css=#ClientName", "css:finder"],
+        ["xpath=//input[@id='ClientName']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68c8e2e2-2340-4c5c-a91d-04033a5c360f",
+      "comment": "CDST3.1 - Enter First Name",
+      "command": "type",
+      "target": "id=ClientName",
+      "targets": [
+        ["id=ClientName", "id"],
+        ["name=ClientName", "name"],
+        ["css=#ClientName", "css:finder"],
+        ["xpath=//input[@id='ClientName']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "israel"
+    }, {
+      "id": "51ea2607-c8a7-4875-abab-646383d983ec",
+      "comment": "CDST3.2 - Select Consumer",
+      "command": "click",
+      "target": "linkText=FT77: ISRAEL ABARCA (ID#:6791, SSN: 319908386) - Active",
+      "targets": [
+        ["id=ui-active-menuitem", "id"],
+        ["linkText=FT77: ISRAEL ABARCA (ID#:6791, SSN: 319908386) - Active", "linkText"],
+        ["css=#ui-active-menuitem", "css:finder"],
+        ["xpath=//a[contains(text(),'FT77: ISRAEL ABARCA (ID#:6791, SSN: 319908386) - Active')]", "xpath:link"],
+        ["xpath=//a[@id='ui-active-menuitem']", "xpath:attributes"],
+        ["xpath=//body/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'FT77: ISRAEL ABARCA (ID#:6791, SSN: 319908386) - Active')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "750986e9-a585-4367-9c0f-7a7775941b41",
+      "comment": "CDST3.3 - Select Search",
+      "command": "click",
+      "target": "id=ClientSearchButton",
+      "targets": [
+        ["id=ClientSearchButton", "id"],
+        ["css=#ClientSearchButton", "css:finder"],
+        ["xpath=//input[@id='ClientSearchButton']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/table/tbody/tr/td[3]/input", "xpath:idRelative"],
+        ["xpath=//td[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4489c0b8-71a5-4cae-8b31-2c69d4e4ec37",
+      "comment": "CDST4.1 - Select Client Info",
+      "command": "clickAt",
+      "target": "id=ClientInfo",
+      "targets": [
+        ["id=ClientInfo", "id"],
+        ["css=#ClientInfo", "css:finder"],
+        ["xpath=//td[@id='ClientInfo']", "xpath:attributes"],
+        ["xpath=//div[@id='tabs-1']/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3506fec3-b9dc-444d-b876-df02e1b89c42",
+      "comment": "CDST 4.2 - Select Edit",
+      "command": "click",
+      "target": "id=ClientInfo_EditButton",
+      "targets": [
+        ["id=ClientInfo_EditButton", "id"],
+        ["css=#ClientInfo_EditButton", "css:finder"],
+        ["xpath=//button[@id='ClientInfo_EditButton']", "xpath:attributes"],
+        ["xpath=//td[@id='ClientInfo']/table/tbody/tr/td[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76eab318-486b-4052-a053-35b610f46ca0",
+      "comment": "CDST4.3 - Select First Name",
+      "command": "click",
+      "target": "id=ClientDemographicsDialog_FirstName",
+      "targets": [
+        ["id=ClientDemographicsDialog_FirstName", "id"],
+        ["name=ClientDemographicsDialog_FirstName", "name"],
+        ["css=#ClientDemographicsDialog_FirstName", "css:finder"],
+        ["xpath=//input[@id='ClientDemographicsDialog_FirstName']", "xpath:attributes"],
+        ["xpath=//div[@id='ClientDemographicsDialog']/table/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/div[2]/table/tbody/tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3b968e1-5afb-4d41-a1f0-d2b7f0503168",
+      "comment": "CDST4.4 - Edit First Name",
+      "command": "type",
+      "target": "id=ClientDemographicsDialog_FirstName",
+      "targets": [
+        ["id=ClientDemographicsDialog_FirstName", "id"],
+        ["name=ClientDemographicsDialog_FirstName", "name"],
+        ["css=#ClientDemographicsDialog_FirstName", "css:finder"],
+        ["xpath=//input[@id='ClientDemographicsDialog_FirstName']", "xpath:attributes"],
+        ["xpath=//div[@id='ClientDemographicsDialog']/table/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/div[2]/table/tbody/tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "ISRAELL"
+    }, {
+      "id": "daabd0d3-084a-4e0c-8b4e-aedb8005868c",
+      "comment": "CDST4.5 - Select Last Name",
+      "command": "click",
+      "target": "id=ClientDemographicsDialog_LastName",
+      "targets": [
+        ["id=ClientDemographicsDialog_LastName", "id"],
+        ["name=ClientDemographicsDialog_LastName", "name"],
+        ["css=#ClientDemographicsDialog_LastName", "css:finder"],
+        ["xpath=//input[@id='ClientDemographicsDialog_LastName']", "xpath:attributes"],
+        ["xpath=//div[@id='ClientDemographicsDialog']/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/div[2]/table/tbody/tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b263e76b-a894-4ecb-82d0-8f059b5679c3",
+      "comment": "CDST4.6 - Edit Last Name",
+      "command": "type",
+      "target": "id=ClientDemographicsDialog_LastName",
+      "targets": [
+        ["id=ClientDemographicsDialog_LastName", "id"],
+        ["name=ClientDemographicsDialog_LastName", "name"],
+        ["css=#ClientDemographicsDialog_LastName", "css:finder"],
+        ["xpath=//input[@id='ClientDemographicsDialog_LastName']", "xpath:attributes"],
+        ["xpath=//div[@id='ClientDemographicsDialog']/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/div[2]/table/tbody/tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "ABARCAA"
+    }, {
+      "id": "48dbf409-c3b8-4f20-bf7b-971195359b48",
+      "comment": "CDST4.7 - Select Save",
+      "command": "click",
+      "target": "xpath=//div[11]/div[11]/div/button/span",
+      "targets": [
+        ["css=.ui-state-hover > .ui-button-text", "css:finder"],
+        ["xpath=//div[11]/div[11]/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "013b3150-7b11-466d-bc49-160d98f09212",
+      "comment": "PAUSE1.1 - Wait for Element Present",
+      "command": "waitForElementPresent",
+      "target": "xpath=//span[contains(.,'ABARCA, ISRAEL')]",
+      "targets": [
+        ["id=ClientHeader_FullName", "id"],
+        ["css=#ClientHeader_FullName", "css:finder"],
+        ["xpath=//span[@id='ClientHeader_FullName']", "xpath:attributes"],
+        ["xpath=//th[@id='activeOrInactiveClientHeader']/span", "xpath:idRelative"],
+        ["xpath=//th/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ABARCA, ISRAEL')]", "xpath:innerText"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "9e895767-3442-459d-bde2-956d3ce8104b",
+      "comment": "CDST5.1 - Select Client Info",
+      "command": "clickAt",
+      "target": "id=ClientInfo",
+      "targets": [
+        ["id=ClientInfo", "id"],
+        ["css=#ClientInfo", "css:finder"],
+        ["xpath=//td[@id='ClientInfo']", "xpath:attributes"],
+        ["xpath=//div[@id='tabs-1']/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7012c1fb-6deb-49ad-a0b6-b5a49ed3cafe",
+      "comment": "CDST5.2 - Select Edit",
+      "command": "click",
+      "target": "id=ClientInfo_EditButton",
+      "targets": [
+        ["id=ClientInfo_EditButton", "id"],
+        ["css=#ClientInfo_EditButton", "css:finder"],
+        ["xpath=//button[@id='ClientInfo_EditButton']", "xpath:attributes"],
+        ["xpath=//td[@id='ClientInfo']/table/tbody/tr/td[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "66bdc274-a040-4df2-b1d0-0e38ef6f061a",
+      "comment": "CDST5.3 - Select First Name",
+      "command": "click",
+      "target": "id=ClientDemographicsDialog_FirstName",
+      "targets": [
+        ["id=ClientDemographicsDialog_FirstName", "id"],
+        ["name=ClientDemographicsDialog_FirstName", "name"],
+        ["css=#ClientDemographicsDialog_FirstName", "css:finder"],
+        ["xpath=//input[@id='ClientDemographicsDialog_FirstName']", "xpath:attributes"],
+        ["xpath=//div[@id='ClientDemographicsDialog']/table/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/div[2]/table/tbody/tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fa0a054-cc37-4962-a406-08b29ac38af6",
+      "comment": "CDST5.4 - Edit First Name",
+      "command": "type",
+      "target": "id=ClientDemographicsDialog_FirstName",
+      "targets": [
+        ["id=ClientDemographicsDialog_FirstName", "id"],
+        ["name=ClientDemographicsDialog_FirstName", "name"],
+        ["css=#ClientDemographicsDialog_FirstName", "css:finder"],
+        ["xpath=//input[@id='ClientDemographicsDialog_FirstName']", "xpath:attributes"],
+        ["xpath=//div[@id='ClientDemographicsDialog']/table/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/div[2]/table/tbody/tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "ISRAEL"
+    }, {
+      "id": "35ef0533-5acf-4e02-947d-a6e1733809f3",
+      "comment": "CDST5.5 - Select Last Name",
+      "command": "click",
+      "target": "id=ClientDemographicsDialog_LastName",
+      "targets": [
+        ["id=ClientDemographicsDialog_LastName", "id"],
+        ["name=ClientDemographicsDialog_LastName", "name"],
+        ["css=#ClientDemographicsDialog_LastName", "css:finder"],
+        ["xpath=//input[@id='ClientDemographicsDialog_LastName']", "xpath:attributes"],
+        ["xpath=//div[@id='ClientDemographicsDialog']/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/div[2]/table/tbody/tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c02e5fb5-b3ed-48d1-80c0-4f76273e338d",
+      "comment": "CDST5.6 - Edit Last Name",
+      "command": "type",
+      "target": "id=ClientDemographicsDialog_LastName",
+      "targets": [
+        ["id=ClientDemographicsDialog_LastName", "id"],
+        ["name=ClientDemographicsDialog_LastName", "name"],
+        ["css=#ClientDemographicsDialog_LastName", "css:finder"],
+        ["xpath=//input[@id='ClientDemographicsDialog_LastName']", "xpath:attributes"],
+        ["xpath=//div[@id='ClientDemographicsDialog']/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/div[2]/table/tbody/tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "ABARCA"
+    }, {
+      "id": "0782d476-8df4-463b-805e-2bda63c0dd7c",
+      "comment": "CDST5.7 - Select Save",
+      "command": "click",
+      "target": "xpath=//div[11]/div[11]/div/button/span",
+      "targets": [
+        ["css=.ui-state-hover > .ui-button-text", "css:finder"],
+        ["xpath=//div[11]/div[11]/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7001805-f2bd-4de2-bf66-649d3d14c3d5",
+      "comment": "PAUSE1.2- Wait for Element Present",
+      "command": "waitForElementPresent",
+      "target": "xpath=//a[contains(text(),'AUTOMATEDTESTS')]",
+      "targets": [
+        ["linkText=AUTOMATEDTESTS", "linkText"],
+        ["css=.navigation a", "css:finder"],
+        ["xpath=//a[contains(text(),'AUTOMATEDTESTS')]", "xpath:link"],
+        ["xpath=//div[@id='topNavControlBar']/div[2]/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:toggleUserMenu();')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'AUTOMATEDTESTS')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "732647ab-3fef-4316-965e-0abb671d1e72",
+      "comment": "CHECKOUT1.1 - Select Menu for Sign Out",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'AUTOMATEDTESTS')]",
+      "targets": [
+        ["linkText=AUTOMATEDTESTS", "linkText"],
+        ["css=.navigation a", "css:finder"],
+        ["xpath=//a[contains(text(),'AUTOMATEDTESTS')]", "xpath:link"],
+        ["xpath=//div[@id='topNavControlBar']/div[2]/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:toggleUserMenu();')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'AUTOMATEDTESTS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "98cdd631-ef0a-47af-8417-629a64252269",
+      "comment": "PAUSE1.3- Wait for Element Present",
+      "command": "waitForElementPresent",
+      "target": "xpath=//a[contains(text(),'Sign Out')]",
+      "targets": [
+        ["linkText=Sign Out", "linkText"],
+        ["css=#usernavigation li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign Out')]", "xpath:link"],
+        ["xpath=//div[@id='usernavigation']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Account/EndSession')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "8e7917b7-5118-4dad-9765-eab4347041df",
+      "comment": "CHECK OUT1.2 - Select Sign Out",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Sign Out')]",
+      "targets": [
+        ["linkText=Sign Out", "linkText"],
+        ["css=#usernavigation li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign Out')]", "xpath:link"],
+        ["xpath=//div[@id='usernavigation']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Account/EndSession')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "80c63e03-b5d8-4d74-bd93-d32e2ffa8fd9",
+    "name": "Employment Record - Term Pay Rate",
+    "commands": [{
+      "id": "fcb064dd-f8e7-42b0-aa38-689c75b76fe6",
+      "comment": "SETUP1.1 - Set Speed",
+      "command": "setSpeed",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8847a53b-7784-44e6-a9b2-554003ff7a86",
+      "comment": "SETUP1.2 - Load Page",
+      "command": "open",
+      "target": "/Account/Authenticate?ReturnUrl=%2f",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74cf02aa-f7c0-4783-95a7-fcb866597cea",
+      "comment": "SETUP1.3 - Set Window Size",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d730095-9cb9-42d1-95fd-5b15e763786c",
+      "comment": "LOGIN1.1 - Select Username",
+      "command": "click",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5867bf6-1e73-4219-b6c3-5aa765b59ccb",
+      "comment": "LOGIN1.2 - Enter Username",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "automatedtests"
+    }, {
+      "id": "8f10d3d0-4268-438e-8880-4a60c112047a",
+      "comment": "LOGIN1.3 - Select Password",
+      "command": "click",
+      "target": "id=pass",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f4c8d19-11db-4133-9d0c-7831fb959c36",
+      "comment": "LOGIN1.4 - Enter Password",
+      "command": "type",
+      "target": "id=pass",
+      "targets": [],
+      "value": "bjlnvrzVepoCE4q6GK2h"
+    }, {
+      "id": "6770f4d3-1468-4167-b99f-5f64e1ba9dfd",
+      "comment": "LOGIN1.5 - Select Login",
+      "command": "click",
+      "target": "css=input:nth-child(8)",
+      "targets": [
+        ["css=input:nth-child(8)", "css:finder"],
+        ["xpath=//input[@value='Login']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac15fab4-15ff-4635-926d-7a2fc225c1af",
+      "comment": "ERST1.1 - Select Organization - IL",
+      "command": "click",
+      "target": "name=StateId",
+      "targets": [
+        ["name=StateId", "name"],
+        ["css=.ui-widget", "css:finder"],
+        ["xpath=//select[@name='StateId']", "xpath:attributes"],
+        ["xpath=//form[@id='SelectStateForm']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "Illinois"
+    }, {
+      "id": "a996c520-681f-4f32-9bf6-9e4ea886e35d",
+      "comment": "ERST2.1 - Select Consumers",
+      "command": "click",
+      "target": "linkText=Consumers",
+      "targets": [
+        ["linkText=Consumers", "linkText"],
+        ["css=#navitem_client_section > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Consumers')]", "xpath:link"],
+        ["xpath=//li[@id='navitem_client_section']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Clients/Index')]", "xpath:href"],
+        ["xpath=//body/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Consumers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2343dce4-757b-4837-8d59-0ab254ed0342",
+      "comment": "ERST2.2 - Select Active Consumers",
+      "command": "click",
+      "target": "linkText=Active Consumers",
+      "targets": [
+        ["linkText=Active Consumers", "linkText"],
+        ["css=ul:nth-child(2) > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Active Consumers')]", "xpath:link"],
+        ["xpath=//div[@id='content']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Clients/Active')]", "xpath:href"],
+        ["xpath=//div[3]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Active Consumers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07edcea9-1216-4cc5-840f-34ed07f8319d",
+      "comment": "ERST2.3 - Select Search",
+      "command": "click",
+      "target": "id=ClientName",
+      "targets": [
+        ["id=ClientName", "id"],
+        ["name=ClientName", "name"],
+        ["css=#ClientName", "css:finder"],
+        ["xpath=//input[@id='ClientName']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bb88444-afc8-450f-b6bc-608134bb6375",
+      "comment": "ERST3.1 - Enter First Name",
+      "command": "type",
+      "target": "id=ClientName",
+      "targets": [
+        ["id=ClientName", "id"],
+        ["name=ClientName", "name"],
+        ["css=#ClientName", "css:finder"],
+        ["xpath=//input[@id='ClientName']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "israel"
+    }, {
+      "id": "d37d8a33-9342-41f7-a76f-9c2d3d9acaaf",
+      "comment": "ERST3.2 - Select Consumer",
+      "command": "click",
+      "target": "linkText=FT77: ISRAEL ABARCA (ID#:6791, SSN: 319908386) - Active",
+      "targets": [
+        ["id=ui-active-menuitem", "id"],
+        ["linkText=FT77: ISRAEL ABARCA (ID#:6791, SSN: 319908386) - Active", "linkText"],
+        ["css=#ui-active-menuitem", "css:finder"],
+        ["xpath=//a[contains(text(),'FT77: ISRAEL ABARCA (ID#:6791, SSN: 319908386) - Active')]", "xpath:link"],
+        ["xpath=//a[@id='ui-active-menuitem']", "xpath:attributes"],
+        ["xpath=//body/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'FT77: ISRAEL ABARCA (ID#:6791, SSN: 319908386) - Active')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b960e3e-4ebc-4b96-89fc-dfdbf32b6b3c",
+      "comment": "ERST3.3 -Select Search",
+      "command": "click",
+      "target": "id=ClientSearchButton",
+      "targets": [
+        ["id=ClientSearchButton", "id"],
+        ["css=#ClientSearchButton", "css:finder"],
+        ["xpath=//input[@id='ClientSearchButton']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/table/tbody/tr/td[3]/input", "xpath:idRelative"],
+        ["xpath=//td[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2861dff6-8118-4e8e-b368-f62aa6a16a73",
+      "comment": "PAUSE1.1 - Wait for Element Present",
+      "command": "waitForElementPresent",
+      "target": "xpath=//span[contains(.,'ABARCA, ISRAEL')]",
+      "targets": [
+        ["id=ClientHeader_FullName", "id"],
+        ["css=#ClientHeader_FullName", "css:finder"],
+        ["xpath=//span[@id='ClientHeader_FullName']", "xpath:attributes"],
+        ["xpath=//th[@id='activeOrInactiveClientHeader']/span", "xpath:idRelative"],
+        ["xpath=//th/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ABARCA, ISRAEL')]", "xpath:innerText"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "591590fc-d128-4e5f-8289-e00b25cb4b42",
+      "comment": "ERST4.1 - Select Employment Record Tab",
+      "command": "click",
+      "target": "linkText=Employment Records",
+      "targets": [
+        ["linkText=Employment Records", "linkText"],
+        ["css=.ui-state-hover > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Employment Records')]", "xpath:link"],
+        ["xpath=//div[@id='tabs']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#tabs-2')]", "xpath:href"],
+        ["xpath=//div[3]/div/div[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Employment Records')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a44ddbea-eb1e-4315-918a-53f16dec04de",
+      "comment": "ERST4.2 - Wait for Employment Record",
+      "command": "waitForElementVisible",
+      "target": "linkText=RUBIO, ELVA",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "7752be84-b6ab-4607-99e9-5bf1fdd6a8f5",
+      "comment": "ERST4.3 - Select Member Name",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'RUBIO, ELVA')]",
+      "targets": [
+        ["linkText=RUBIO, ELVA", "linkText"],
+        ["css=#\\31 4589 a", "css:finder"],
+        ["xpath=//a[contains(text(),'RUBIO, ELVA')]", "xpath:link"],
+        ["xpath=//tr[@id='14589']/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/EmploymentRecords/EmploymentRecordDetail?id=14589')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'RUBIO, ELVA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9af3911c-f361-409d-b724-eeca9688a8d7",
+      "comment": "ERST4.4 - Wait for Employment Record",
+      "command": "waitForElementVisible",
+      "target": "css=#edit_EmpRecPayRateGrid .ui-icon",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "3f942f0b-132e-4a32-bb85-6af91d435d3d",
+      "comment": "ERST4.5 - Select Pay Rate",
+      "command": "click",
+      "target": "xpath=//tr[@id='143561']/td[2]",
+      "targets": [
+        ["css=#\\31 43561 > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[@id='143561']/td[2]", "xpath:idRelative"],
+        ["xpath=//div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Attendant Services')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8acecd62-1668-42ac-a548-2fa8d79cee45",
+      "comment": "ERST4.6 - Select Edit Button",
+      "command": "click",
+      "target": "xpath=//td[@id='edit_EmpRecPayRateGrid']/div/span",
+      "targets": [
+        ["css=#edit_EmpRecPayRateGrid .ui-icon", "css:finder"],
+        ["xpath=//td[@id='edit_EmpRecPayRateGrid']/div/span", "xpath:idRelative"],
+        ["xpath=//td[3]/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "054d9cfc-08fb-4eef-8579-f8ac493c804d",
+      "comment": "ERST4.7 - Select End Date",
+      "command": "click",
+      "target": "xpath=//input[@id='EndDate']",
+      "targets": [
+        ["id=EndDate", "id"],
+        ["name=EndDate", "name"],
+        ["css=#EndDate", "css:finder"],
+        ["xpath=//input[@id='EndDate']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_EndDate']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eeb4a1b5-1df9-460e-b649-2394bf12a01e",
+      "comment": "ERST4.8 - Enter End Date",
+      "command": "type",
+      "target": "id=EndDate",
+      "targets": [],
+      "value": "10/3/2032"
+    }, {
+      "id": "7d3b8c3f-fa20-4bc3-9133-f121282bb4a9",
+      "comment": "ERST4.9 - Submit End Date",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Submit')]",
+      "targets": [
+        ["id=sData", "id"],
+        ["linkText=Submit", "linkText"],
+        ["css=#sData", "css:finder"],
+        ["xpath=//a[contains(text(),'Submit')]", "xpath:link"],
+        ["xpath=//a[@id='sData']", "xpath:attributes"],
+        ["xpath=//tr[@id='Act_Buttons']/td[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[4]", "xpath:href"],
+        ["xpath=//td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5375e06f-f8f4-42e6-9945-44d0a5f9f052",
+      "comment": "PAUSE1.2 - Wait for Element Present",
+      "command": "waitForElementVisible",
+      "target": "xpath=//td[contains(.,'10/3/2032')]",
+      "targets": [
+        ["css=#\\31 43561 > td:nth-child(6)", "css:finder"],
+        ["xpath=//tr[@id='143561']/td[6]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[6]", "xpath:position"],
+        ["xpath=//td[contains(.,'10/3/2032')]", "xpath:innerText"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "91d43848-2dd1-4d20-aeb0-f64157b5f6fe",
+      "comment": "PAUSE1.2 - Wait for Element Present",
+      "command": "waitForElementVisible",
+      "target": "xpath=//td[contains(.,'10/3/2032')]",
+      "targets": [
+        ["css=#\\31 43561 > td:nth-child(6)", "css:finder"],
+        ["xpath=//tr[@id='143561']/td[6]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[6]", "xpath:position"],
+        ["xpath=//td[contains(.,'10/3/2032')]", "xpath:innerText"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "3f9266cb-5a8a-49fa-95c4-4b71c2a2ef21",
+      "comment": "ERST5.1 - Select Pay Rate",
+      "command": "click",
+      "target": "xpath=//td[contains(.,'10/3/2032')]",
+      "targets": [
+        ["css=#\\31 43561 > td:nth-child(6)", "css:finder"],
+        ["xpath=//tr[@id='143561']/td[6]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[6]", "xpath:position"],
+        ["xpath=//td[contains(.,'10/3/2032')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ca8f121-5b0c-430f-af8f-22903d4a08bc",
+      "comment": "ERST5.2 - Select Edit Button",
+      "command": "click",
+      "target": "xpath=//td[@id='edit_EmpRecPayRateGrid']/div/span",
+      "targets": [
+        ["css=#edit_EmpRecPayRateGrid .ui-icon", "css:finder"],
+        ["xpath=//td[@id='edit_EmpRecPayRateGrid']/div/span", "xpath:idRelative"],
+        ["xpath=//td[3]/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1edc575a-9cd5-40e7-98db-2717c07d7ba5",
+      "comment": "ERST5.3 - Select End Date",
+      "command": "click",
+      "target": "xpath=//input[@id='EndDate']",
+      "targets": [
+        ["id=EndDate", "id"],
+        ["name=EndDate", "name"],
+        ["css=#EndDate", "css:finder"],
+        ["xpath=//input[@id='EndDate']", "xpath:attributes"],
+        ["xpath=//tr[@id='tr_EndDate']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6b4b47c-fad2-49f8-9e0a-6fc9b90dc996",
+      "comment": "ERST5.4 - Remove End Date",
+      "command": "type",
+      "target": "id=EndDate",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "403ca933-226a-41fb-b90b-3b85ca87134d",
+      "comment": "ERST5.5 - Submit End Date",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Submit')]",
+      "targets": [
+        ["id=sData", "id"],
+        ["linkText=Submit", "linkText"],
+        ["css=#sData", "css:finder"],
+        ["xpath=//a[contains(text(),'Submit')]", "xpath:link"],
+        ["xpath=//a[@id='sData']", "xpath:attributes"],
+        ["xpath=//tr[@id='Act_Buttons']/td[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[4]", "xpath:href"],
+        ["xpath=//td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8924fb4e-7001-4d5b-95e1-96dfb4525fc2",
+      "comment": "PAUSE1.3 - Wait for Element Present",
+      "command": "waitForElementVisible",
+      "target": "css=#edit_EmpRecPayRateGrid .ui-icon",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b5a4eca2-a948-4177-8b2c-828100299f57",
+      "comment": "PAUSE1.4- Wait for Element Present",
+      "command": "waitForElementPresent",
+      "target": "xpath=//a[contains(text(),'AUTOMATEDTESTS')]",
+      "targets": [
+        ["linkText=AUTOMATEDTESTS", "linkText"],
+        ["css=.navigation a", "css:finder"],
+        ["xpath=//a[contains(text(),'AUTOMATEDTESTS')]", "xpath:link"],
+        ["xpath=//div[@id='topNavControlBar']/div[2]/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:toggleUserMenu();')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'AUTOMATEDTESTS')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "7747cc5b-c7ed-4ae9-9d89-9c9661835258",
+      "comment": "CHECKOUT1.1 - Select Menu for Sign Out",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'AUTOMATEDTESTS')]",
+      "targets": [
+        ["linkText=AUTOMATEDTESTS", "linkText"],
+        ["css=.navigation a", "css:finder"],
+        ["xpath=//a[contains(text(),'AUTOMATEDTESTS')]", "xpath:link"],
+        ["xpath=//div[@id='topNavControlBar']/div[2]/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:toggleUserMenu();')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'AUTOMATEDTESTS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac6d8dce-7221-425c-93d3-81eccddace46",
+      "comment": "PAUSE1.5- Wait for Element Present",
+      "command": "waitForElementPresent",
+      "target": "xpath=//a[contains(text(),'Sign Out')]",
+      "targets": [
+        ["linkText=Sign Out", "linkText"],
+        ["css=#usernavigation li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign Out')]", "xpath:link"],
+        ["xpath=//div[@id='usernavigation']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Account/EndSession')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "cf690612-e362-4de8-9d27-a3172ba2fd23",
+      "comment": "CHECK OUT1.2 - Select Sign Out",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Sign Out')]",
+      "targets": [
+        ["linkText=Sign Out", "linkText"],
+        ["css=#usernavigation li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign Out')]", "xpath:link"],
+        ["xpath=//div[@id='usernavigation']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Account/EndSession')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0e7825b8-a1ad-454c-81f6-9838dfbe2090",
+    "name": "PAID Smoke Test",
+    "persistSession": true,
+    "parallel": false,
+    "timeout": 500,
+    "tests": ["3b9e94c4-48bf-46fc-9c66-88bc5f91df42", "80c63e03-b5d8-4d74-bd93-d32e2ffa8fd9"]
+  }],
+  "urls": ["https://paidalpha.nepacil.local/"],
+  "plugins": []
+}
